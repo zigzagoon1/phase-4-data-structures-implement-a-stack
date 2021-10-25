@@ -1,4 +1,4 @@
-require_relative '../lib/my_stack'
+require_relative '../lib/stack'
 
 RSpec.configure do |config|
   config.order = :default
