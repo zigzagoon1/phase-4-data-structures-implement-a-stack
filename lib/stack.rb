@@ -6,7 +6,7 @@ class Stack
   end
 
   def push(item)
-    raise 'Stack Overflow' if @limit && @stack.length == @limit
+    raise 'Stack Overflow' if full?
 
     @stack.push(item)
   end
@@ -16,7 +16,7 @@ class Stack
   end
 
   def peek
-    @stack[@stack.length - 1]
+    @stack.last
   end
 
   def size
@@ -24,7 +24,7 @@ class Stack
   end
 
   def empty?
-    @stack.size.zero?
+    @stack.empty?
   end
 
   def full?
